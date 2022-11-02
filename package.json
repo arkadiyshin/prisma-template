@@ -1,0 +1,24 @@
+{
+  "name": "prisma-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@mermaid-js/mermaid-cli": "^9.1.7",
+    "@types/node": "^18.11.9",
+    "prisma": "^4.5.0",
+    "prisma-docs-generator": "^0.5.0",
+    "prisma-erd-generator": "^1.2.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.5.0"
+  }
+}
