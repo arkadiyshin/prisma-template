@@ -39,10 +39,6 @@ inactive inactive
     Float squaremeters  
     Int quantity  
     String way_to_property  
-    Int type_of_property_id  "nullable"
-    Int state_id  "nullable"
-    Int manager_id  "nullable"
-    Int inspector_id  "nullable"
     }
   
 
@@ -60,7 +56,6 @@ inactive inactive
 
   CaseItem {
     Int id PK 
-    Int case_id  
     Int room  
     String room_title  "nullable"
     String description  "nullable"
@@ -70,7 +65,6 @@ inactive inactive
 
   CasePhoto {
     Int id PK 
-    Int case_id  
     Int room  
     Bytes photo  
     }
@@ -81,17 +75,12 @@ inactive inactive
     DateTime date  
     DateTime time_from  
     DateTime time_to  
-    Int case_id  
     }
   
 
   CaseHistory {
     Int id PK 
     DateTime time  
-    Int case_id  
-    Int case_state_id  
-    Int case_new_state_id  
-    Int user_id  
     String description  "nullable"
     Json case_data  "nullable"
     }
@@ -99,14 +88,11 @@ inactive inactive
 
   Transition {
     Int id PK 
-    Int state_id  
-    Int next_state_id  
     }
   
 
   TransitionAccess {
     Roles role  
-    Int transition_id  
     }
   
     User o|--|o Roles : "enum:role"
